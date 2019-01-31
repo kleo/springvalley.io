@@ -37,16 +37,23 @@
 </div>
 
 <script type="text/javascript">
+  anime({
+    targets: '#lineDrawing .lines path',
+    strokeDashoffset: [anime.setDashoffset, 0],
+    easing: 'easeInOutSine',
+    duration: 5000,
+    delay: function(el, i) { return i * 250 },
+    direction: 'normal',
+  });
+</script>
 
-	var lineDrawing = anime({
-  targets: '#lineDrawing .lines path',
-  strokeDashoffset: [anime.setDashoffset, 0],
-  easing: 'easeInOutSine',
-  duration: 5000,
-  delay: function(el, i) { return i * 250 },
-  direction: 'normal',
-});
-
+<script type="text/javascript">
+  anime({
+    targets: '#lineDrawing .lines path',
+    fill: ['#1f1', '#fff'],
+    direction: 'reverse',
+    duration: 5000,
+  });
 </script>
 
 </body>
